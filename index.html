@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Bài Tập JAVASCRIPT Buổi 4 - Trang 24 31 32</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+            shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .w-10 {
+            width: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1 class="text-center text-danger my-5 text-uppercase">
+            JAVASCRIPT Buổi 4 - Bài tập trang 24, 31 & 32</h1>
+
+        <h3><b>Bài tập trang 24:</b> xếp loại kết quả học tập. </h3>
+        <div class="row">
+            <div class="col-6">
+                <form>
+                    <div class="form-group" style="height: 100px;">
+                        <label>Tên sinh viên</label>
+                        <input type="text" class="form-control" id="nameStudent" placeholder="Nhập tên sinh viên">
+                        <p class="text-danger"></p>
+                    </div>
+
+                    <div class="form-group" style="height: 100px;">
+                        <label>Môn Toán <span class="text-danger">*</span></label>
+                        <input class="form-control form-control-1" id="math" placeholder="Nhập điểm môn toán">
+                        <p id="text1" class="error-message text-danger"></p>
+                    </div>
+
+                    <div class="form-group" style="height: 100px;">
+                        <label>Môn Lý <span class="text-danger">*</span></label>
+                        <input class="form-control form-control-1" id="physical" placeholder="Nhập điểm môn lý">
+                        <p id="text2" class="error-message text-danger"></p>
+                    </div>
+
+                    <div class="form-group" style="height: 100px;">
+                        <label>Môn Hoá <span class="text-danger">*</span></label>
+                        <input class="form-control form-control-1" id="chemistry" placeholder="Nhập điểm môn hóa">
+                        <p id="text3" class="error-message text-danger"></p>
+                    </div>
+
+                    <button type="submit" id="btnClassification" class="btn btn-danger" disabled>Xếp loại</button>
+                </form>
+            </div>
+
+            <div id="showResult" class="col-6 text-center"></div>
+        </div>
+
+        <hr>
+
+
+        <h3 class="mt-5"><b>Bài tập trang 31</b></h3>
+        <h5>Bài 1: Sắp xếp thứ tự tăng dần của 3 số nguyên</h5>
+        <div class="row">
+            <div class="col-6">
+                <form>
+                    <div class="form-group">
+                        <label>Số nguyên 1 <span class="text-danger">*</span></label>
+                        <input class="form-control" id="Int1" placeholder="Nhập giá trị số nguyên thứ nhất">
+                        <p id="text4" class="error-message2 text-danger"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Số nguyên 2 <span class="text-danger">*</span></label>
+                        <input class="form-control" id="Int2" placeholder="Nhập giá trị số nguyên thứ hai">
+                        <p id="text5" class="error-message2 text-danger"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Số nguyên 3 <span class="text-danger">*</span></label>
+                        <input class="form-control" id="Int3" placeholder="Nhập giá trị số nguyên thứ 3">
+                        <p id="text6" class="error-message2 text-danger"></p>
+                    </div>
+
+                    <button type="submit" id="btnSort" class="btn btn-danger">Sắp xếp</button>
+                </form>
+            </div>
+
+            <div class="col-6 text-center d-flex align-items-center">
+                <h4>Thứ tự tăng dần: <span id="showSort"></span></h4>
+            </div>
+        </div>
+
+
+
+        <h5 class="mt-5">Bài 2: Viết chương trình "Chào hỏi" các thành viên trong gia đình</h5>
+        <div class="row">
+            <div class="col-6">
+                <form>
+                    <div class="form-group">
+                        <label>Cho hỏi Laptop này là của ai vậy <span class="text-danger">*</span></label>
+                        <select id="greeting">
+                            <option value="B">Bố</option>
+                            <option value="M">Mẹ</option>
+                            <option value="A">Anh Trai</option>
+                            <option vale="E">Em gái</option>
+                        </select>
+                    </div>
+                    <button type="submit" id="btnGreeting" class="btn btn-danger">Chào</button>
+                </form>
+            </div>
+            <div class="col-6 text-center d-flex align-items-center">
+                <h3 class="my-2" id="greetingMessage"></h3>
+            </div>
+        </div>
+
+        <h5 class="mt-5">Bài 3: Viết chương trình xuất ra bao nhiêu số nguyên "chẵn" và "lẻ"</h5>
+        <div class="row">
+            <div class="col-6">
+                <form>
+                    <div class="form-group">
+                        <label>Số nguyên 1 <span class="text-danger">*</span></label>
+                        <input class="form-control" type="number" id="integer1">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Số nguyên 2 <span class="text-danger">*</span></label>
+                        <input class="form-control" type="number" id="integer2">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Số nguyên 3 <span class="text-danger">*</span></label>
+                        <input class="form-control" type="number" id="integer3">
+                    </div>
+
+                    <button type="submit" id="btnInteger" class="btn btn-danger">Tính</button>
+                </form>
+            </div>
+            <div class="col-6 text-center d-flex align-items-center">
+                <h4 class="mt-3" id="showInteger"></h4>
+            </div>
+        </div>
+
+
+        <h5 class="mt-5">Bài 4: Nhập vào 3 cạnh của 1 tam giác, viết chương trình tìm ra đó là Tam giác gì</h5>
+        <div class="row">
+            <div class="col-6">
+                <form>
+                    <div class="form-group">
+                        <label>Cạnh 1 <span class="text-danger">*</span></label>
+                        <input class="form-control" type="number" id="canh1" placeholder="Nhập chiều dài cạnh 1">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cạnh 2 <span class="text-danger">*</span></label>
+                        <input class="form-control" type="number" id="canh2" placeholder="Nhập chiều dài cạnh 2">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cạnh 3 <span class="text-danger">*</span></label>
+                        <input class="form-control" type="number" id="canh3" placeholder="Nhập chiều dài cạnh 3">
+                    </div>
+
+                    <button type="submit" id="btnTamGiac" class="btn btn-danger">Tìm </button>
+                </form>
+            </div>
+            <div class="col-6 text-center d-flex align-items-center">
+                <h4 class="mt-3" id="showTamGiac"></h4>
+            </div>
+        </div>
+
+
+
+
+
+        <h3 class="my-5"><b>Bài tập trang 32:</b> bài tập nâng cao </h3>
+        <h5>Bài 1: Tìm ngày tiếp theo và ngày hôm trước</h5>
+        <p class="text-muted m-0">Hãy nhập ngày bất kỳ mà bạn muốn.</p>
+        <p><i class="text-muted">Chú ý định dạng ngày/ tháng/ năm</i></p>
+        <div class="row my-5">
+            <div class="col-12">
+                <button class="btn btn-danger" id="prev"> Hôm qua</button>
+                <input id="date" min="1" max="31" step="1" type="number" class="w-10" placeholder="dd"
+                    onkeyup="myFunction()">
+                <input id="month" min="1" max="12" step="1" type="number" class="w-10" placeholder="mm"
+                    onkeyup="myFunction()">
+                <input id="year" type="number" placeholder="yyyy">
+                <button class="btn btn-danger" id="next"> Ngày mai</button>
+
+            </div>
+
+        </div>
+
+
+
+        <h5>Bài 2: Tìm số ngày trong tháng</h5>
+        <p class="text-muted m-0">Hãy nhập tháng và năm bất kỳ mà bạn muốn.</p>
+        <p><i class="text-muted">Chú ý định dạng tháng/ năm</i></p>
+        <div class="row my-5">
+            <div class="col-8">
+                <form action="">
+                    <input id="thang" min="1" max="12" step="1" type="number" class="w-10" placeholder="mm"
+                        onkeyup="myFunction2()">
+                    <input id="nam" type="number" placeholder="yyyy">
+                    <button type="submit" class="btn btn-danger" id="btnSoNgay">Tính số ngày</button>
+                </form>
+            </div>
+            <div class="col-4 text-center">
+                <h4 class="alert-danger" id="showSoNgay"></h4>
+            </div>
+        </div>
+
+        <h5>Bài 3: Đọc số nguyên có 3 chữ số</h5>
+        <p class="text-muted m-0">Hãy nhập số nguyên có 3 chữ số bất kỳ mà bạn muốn.</p>
+        <div class="row my-5">
+            <div class="col-6">
+                <form action="">
+                    <input id="number" min="1" max="12" step="1" type="number" class="w-50"
+                        placeholder="Số nguyên có 3 chữ số" onkeyup="myFunction3()">
+                    <button type="submit" class="btn btn-danger" id="btnDocSo" disabled>Đọc số</button>
+                </form>
+            </div>
+            <div class="col-6 text-center">
+                <h4 class="alert-success" id="showDocSo"></h4>
+            </div>
+        </div>
+
+
+        <h5>Bài 4: Ai là người xa trường học nhất?</h5>
+        <p class="text-muted mb-5">Hãy nhập dịnh vị toạ độ trường học và nhà của 3 bạn học vào ô dưới đây.</p>
+        <form action="">
+            <div class="row align-items-center">
+                <div class="col-6">
+                    <div class="form-group mb-5">
+                        <p>Toạ độ nhà của bạn thứ nhất</p>
+                        <input onkeyup="myFunction4()" id="nameA" type="text" placeholder="Name">
+                        <input onkeyup="myFunction4()" id="xA" type="number" placeholder="Toạ độ x">
+                        <input onkeyup="myFunction4()" id="yA" type="number" placeholder="Toạ độ y">
+                    </div>
+                    <div class="form-group mb-5">
+                        <p>Toạ độ nhà của bạn thứ hai</p>
+                        <input onkeyup="myFunction4()" id="nameB" type="text" placeholder="Name">
+                        <input onkeyup="myFunction4()" id="xB" type="number" placeholder="Toạ độ x">
+                        <input onkeyup="myFunction4()" id="yB" type="number" placeholder="Toạ độ y">
+                    </div>
+                    <div class="form-group">
+                        <p>Toạ độ nhà của bạn thứ ba</p>
+                        <input onkeyup="myFunction4()" id="nameC" type="text" placeholder="Name">
+                        <input onkeyup="myFunction4()" id="xC" type="number" placeholder="Toạ độ x">
+                        <input onkeyup="myFunction4()" id="yC" type="number" placeholder="Toạ độ y">
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="form-group">
+                        <p>Toạ độ trường học</p>
+                        <input onkeyup="myFunction4()" id="xT" type="number" placeholder="Toạ độ x">
+                        <input onkeyup="myFunction4()" id="yT" type="number" placeholder="Toạ độ y">
+                        <h3 class="alert-warning" id="showXaNhat"></h3>
+                    </div>
+                </div>
+            </div>
+            <button id="btnxaNhat" class="btn btn-danger" type="submit" disabled>Tính khoảng cách</button>
+        </form>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+
+
+    <script src="./BUOI_4_BT_TRANG_24/js/trang24.js"></script>
+    <script src="./BUOI_4_BT_TRANG_31/BT_TRANG_31.1/js/trang31-baiTap1.js"></script>
+    <script src="./BUOI_4_BT_TRANG_31/BT_TRANG_31.2/js/trang31-baiTap2.js"></script>
+    <script src="./BUOI_4_BT_TRANG_31/BT_TRANG_31.3/js/trang31-baiTap3.js"></script>
+    <script src="./BUOI_4_BT_TRANG_31/BT_TRANG_31.4/js/trang31-baiTap4.js"></script>
+
+    <script src="./BUOI_4_BT_TRANG_32/baiTap1/js/trang32-baiTap1.js"></script>
+    <script src="./BUOI_4_BT_TRANG_32/baiTap2/js/trang32-baiTap2.js"></script>
+    <script src="./BUOI_4_BT_TRANG_32/baiTap3/js/trang32-baiTap3.js"></script>
+    <script src="./BUOI_4_BT_TRANG_32/baiTap4/js/trang32-baiTap4.js"></script>
+</body>
+
+</html>
